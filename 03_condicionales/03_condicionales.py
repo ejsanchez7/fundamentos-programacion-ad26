@@ -40,9 +40,12 @@ def calcular_corriente(voltaje, resistencia) :
 # if corriente :
 #     print(f"La corriente es: {corriente}")
 
+def verifica_triangulo(a, b, c) :
+    return ((a + b > c) and (a + c > b) and (b + c > a))
+
 def obtiene_tipo_triangulo(a, b, c) :# 2, 5, 4
     # La suma de dos lados es mayor al otro
-    if (a + b > c) and (a + c > b) and (b + c > a) :
+    if verifica_triangulo(a, b, c) :
         # Equilátero
         if (a == b) and (b == c) :
             print("Es equilátero")
@@ -58,3 +61,25 @@ def obtiene_tipo_triangulo(a, b, c) :# 2, 5, 4
         return False
 
 obtiene_tipo_triangulo(2, 5, 4)
+
+# Determinar si un año es bisiesto. Un año es bisiesto 
+# si es múltiplo de 4 (por ejemplo, 1984). Sin embargo, 
+# los años múltiplos de 100 sólo son bisiestos cuando a 
+# la vez son múltiplos de 400 (por ejemplo, 1800 no es 
+# bisiesto, mientras que 2000 si lo es).
+def calcula_bisiesto(anio) :
+    multiplo_cuatro = ((anio % 4) == 0)
+    multiplo_cien = ((anio % 100) == 0)
+    multiplo_400 = ((anio % 400) == 0)
+    
+    if multiplo_cuatro :
+        # Puede ser bisiesto
+        if multiplo_cien :
+            if multiplo_400 :
+                return True
+            else :
+                return False
+        else :
+            return True
+    else :
+        return False
