@@ -71,3 +71,13 @@ print(rangos)
 # recorre_lista_while(lista_1)
 # recorre_lista(lista_1)
 # print(calcular_promedio(lista_1))
+
+def calcular_varianza(lista) :
+    promedio = calcular_promedio(lista)
+    suma = 0
+
+    for numero in lista :
+        resta = numero - promedio
+        suma += resta
+
+    
