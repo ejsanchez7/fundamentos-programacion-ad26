@@ -1,1 +1,0 @@
-from funciones_archivos import abrir_archivo

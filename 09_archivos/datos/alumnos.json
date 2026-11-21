@@ -1,0 +1,14 @@
+[
+      {
+            "nombre": "Max",
+            "calificaciones": [100,100,100]
+      },
+      {
+            "nombre": "Luis",
+            "calificaciones": [63,100,95]
+      },
+      {
+            "nombre": "Sarah",
+            "calificaciones": [89,90,100]
+      }
+]

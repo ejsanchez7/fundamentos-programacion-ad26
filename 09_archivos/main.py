@@ -26,6 +26,3 @@ archivo_escritura.close()
 archivo_append = open("./prueba.txt", "at") # modo append, agrega contenido al final
 archivo_append.write("Nueva línea\n")
 archivo_append.close()
-
-
-# borrar archivos
